@@ -88,10 +88,19 @@ test.describe('Skin Analyzer Form - Component Tests', () => {
     
     await trialPage.waitForLoadState('networkidle');
     
+    // Get initial URL to verify we don't navigate away
+    const initialUrl = trialPage.url();
+    
     // Try to submit without filling required fields
     await trialPage.getByRole('button', { name: 'START 14-DAY FREE TRIAL' }).click();
     
-    // Form should not submit - button should still be visible
+    // Wait a bit for any validation to appear
+    await trialPage.waitForTimeout(1000);
+    
+    // Verify form didn't submit - URL should not change
+    await expect(trialPage).toHaveURL(initialUrl);
+    
+    // Form button should still be visible (not submitted)
     await expect(trialPage.getByRole('button', { name: 'START 14-DAY FREE TRIAL' })).toBeVisible();
     
     // Note: Add specific error message assertions if the form shows validation errors
