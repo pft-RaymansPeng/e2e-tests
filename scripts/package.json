@@ -1,0 +1,17 @@
+{
+  "name": "slack-webhook-server",
+  "version": "1.0.0",
+  "description": "Webhook server for Slack slash commands to trigger GitHub Actions",
+  "main": "trigger-from-slack.js",
+  "scripts": {
+    "start": "node trigger-from-slack.js",
+    "dev": "nodemon trigger-from-slack.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

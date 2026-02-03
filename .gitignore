@@ -1,0 +1,29 @@
+# Ignore Playwright test results
+test-results/
+playwright-report/
+
+# Ignore Playwright browsers
+.playwright/
+
+# Ignore screenshots and videos from tests
+screenshots/
+videos/
+
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
