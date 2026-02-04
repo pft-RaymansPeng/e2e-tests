@@ -26,7 +26,7 @@ test.describe('Contact Sales - E2E Flow', () => {
       industry: 'Skincare',
       position: 'Engineer',
       website: 'https://www.perfectcorp.com',
-      email: generateRandomEmail(), // Dynamic email
+      email: 'raymans_peng@perfectcorp.com', // Static email as requested
       message: 'E2E test for contact sales form submission'
     };
     
